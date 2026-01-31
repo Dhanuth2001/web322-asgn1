@@ -10,22 +10,22 @@
 *
 ********************************************************************************/
 
+require("dotenv").config();
 const express = require("express");
-const path = require("path");
+
 const { loadSightings } = require("./utils/dataLoader");
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+app.use(express.static(__dirname + '/public'))
+const PORT = process.env.PORT || 3000;
 
-/* Middleware */
-app.use(express.static("public"));
 
-/* Routes */
+app.use(express.static(__dirname + '/public'))
+
+
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "views/index.html"));
+  res.sendFile(__dirname + "/views/index.html");
 });
-
-/* API Endpoints */
 
 app.get("/api/sightings", async (req, res) => {
   const sightings = await loadSightings();
@@ -47,7 +47,7 @@ app.get("/api/sightings/species-list", async (req, res) => {
 
 app.get("/api/sightings/habitat/forest", async (req, res) => {
   const sightings = await loadSightings();
-  const forestSightings = sightings.filter(s => s.habitat === "forest"); /*this filters api forests*/
+  const forestSightings = sightings.filter(s => s.habitat === "forest"); 
 
   res.json({
     habitat: "forest",
@@ -87,7 +87,6 @@ app.get("/api/sightings/recent", async (req, res) => {
   res.json(recent);
 });
 
-/* Server */
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Assignment Server listens to port ${PORT}`);
 });
