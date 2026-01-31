@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wildlife Sighting Tracker - About</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1>🦅 Wildlife Sighting Tracker</h1>
+        <p class="subtitle">
+          A WEB322 Express.js Application
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- About Me -->
+      <section class="about-section">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <img
+            src="/images/1.jpeg"
+            alt="Profile Photo"
+            class="profile-photo"
+          />
+
+          <div class="about-text">
+            <h3>Hello, I’m Dhanuth Fernando </h3>
+            <p>
+              I am a Computer Programmin and Analysis student with a strong
+              interest in web development and backend programming. I enjoy
+              building structured applications that process and expose data
+              through APIs.
+            </p>
+            <p>
+              This project was created as part of my WEB322 coursework to gain
+              hands-on experience with Express.js, asynchronous file operations,
+              and JavaScript array processing techniques.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Description -->
+      <section class="project-section">
+        <h2>About This Project</h2>
+        <p>
+          The Wildlife Sighting Tracker is a backend-focused web application
+          developed using Express.js. It provides a REST-style API that allows
+          users to retrieve, filter, and search wildlife sighting data stored in
+          a JSON file.
+        </p>
+
+        <div class="features">
+          <div class="feature-card">
+            <span class="icon">⚙️</span>
+            <h4>REST API</h4>
+            <p>
+              Multiple endpoints designed to query wildlife sighting data
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h4>Async Data Handling</h4>
+            <p>
+              Uses async/await to read and parse JSON data efficiently
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h4>JavaScript Logic</h4>
+            <p>
+              Implements array methods such as filter, map, find, and findIndex
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- API Endpoints -->
+      <section class="api-section">
+        <h2>Available API Endpoints</h2>
+        <p class="api-note">
+          Click on any endpoint below to view the JSON response.
+        </p>
+
+        <div class="endpoint-list">
+          <a href="/api/sightings" target="_blank" class="endpoint-card">
+            <div>
+              <code class="method">GET</code>
+              <code class="route">/api/sightings</code>
+              <p>Retrieve all wildlife sightings</p>
+            </div>
+          </a>
+
+          <a
+            href="/api/sightings/verified"
+            target="_blank"
+            class="endpoint-card"
+          >
+            <div>
+              <code class="method">GET</code>
+              <code class="route">/api/sightings/verified</code>
+              <p>Retrieve only verified sightings</p>
+            </div>
+          </a>
+
+          <a
+            href="/api/sightings/species-list"
+            target="_blank"
+            class="endpoint-card"
+          >
+            <div>
+              <code class="method">GET</code>
+              <code class="route">/api/sightings/species-list</code>
+              <p>View a list of unique species names</p>
+            </div>
+          </a>
+
+          <a
+            href="/api/sightings/habitat/forest"
+            target="_blank"
+            class="endpoint-card"
+          >
+            <div>
+              <code class="method">GET</code>
+              <code class="route">/api/sightings/habitat/forest</code>
+              <p>View all forest habitat sightings</p>
+            </div>
+          </a>
+
+          <a
+            href="/api/sightings/search/eagle"
+            target="_blank"
+            class="endpoint-card"
+          >
+            <div>
+              <code class="method">GET</code>
+              <code class="route">/api/sightings/search/eagle</code>
+              <p>Search for the first eagle sighting</p>
+            </div>
+          </a>
+
+          <a
+            href="/api/sightings/find-index/moose"
+            target="_blank"
+            class="endpoint-card"
+          >
+            <div>
+              <code class="method">GET</code>
+              <code class="route">/api/sightings/find-index/moose</code>
+              <p>Find the index of the moose sighting</p>
+            </div>
+          </a>
+
+          <a
+            href="/api/sightings/recent"
+            target="_blank"
+            class="endpoint-card"
+          >
+            <div>
+              <code class="method">GET</code>
+              <code class="route">/api/sightings/recent</code>
+              <p>Retrieve the three most recent sightings</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2026 Dhanuth Fernando | WEB322 - Wildlife Sighting Tracker
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
