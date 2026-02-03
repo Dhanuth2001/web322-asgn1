@@ -76,8 +76,10 @@ app.get("/api/sightings/find-index/moose", async (req, res) => {
 
 app.get("/api/sightings/recent", async (req, res) => {
   const sightings = await loadSightings();
+
   const recent = sightings
-    .slice(-3)
+    .sort((a, b) => new Date(b.date) - new Date(a.date)) // newest first
+    .slice(0, 3)
     .map(s => ({
       species: s.species,
       location: s.location,
